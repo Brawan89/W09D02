@@ -25,6 +25,7 @@ const signIn = (state = instialState , action) => {
 export default signIn;
 
 export const log = (data) => {
+    // console.log("From the reduce" , data);
     return {
         type: "LOGIN",
         payload: data
