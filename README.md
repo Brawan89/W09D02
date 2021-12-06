@@ -16,8 +16,21 @@ npm start
 ```
 
 ###### Start Redux
+> install 
 ```
 npm i redux
 npm i react-redux
 npm i redux-devtools-extension
+```
+> Reducers
+  1. index.js
+  2. task.js
+  3. login.js
+
+> should start by wrapping your entire application in a <Provider> component to make the store available throughout the component tree.
+
+```
+const store = createStore(rootReducer)
+
+<Provider store={store}> </Provider>
 ```
