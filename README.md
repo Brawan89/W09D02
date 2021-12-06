@@ -36,12 +36,16 @@ const store = createStore(rootReducer)
 ```
 
 > useDispatch
+```
 The equivalent of map dispatch to props is useDispatch. 
 We will invoke useDispatch and store it to a variable, dispatch. 
 Dispatch will work with all actions imported from the actions folder. 
- 
+```
+  
 > useSelector
+```
 useSelector is a function that takes the current state as an argument 
 and returns whatever data you want from it and it allows you to store 
 the return values inside a variable within the scope of 
 you functional components instead of passing down as props
+```
