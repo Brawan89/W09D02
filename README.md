@@ -49,3 +49,14 @@ and returns whatever data you want from it and it allows you to store
 the return values inside a variable within the scope of 
 you functional components instead of passing down as props
 ```
+## start Task
+###### This task will use redux, for login, logout, and tasks (add, get, edit, delete task ).
+
+  
+> use packages
+- redux
+- axios
+- react-router-dom
+- dotenv
+- react-redux
+- redux-devtools-extension
