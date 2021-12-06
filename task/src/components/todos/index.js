@@ -12,6 +12,7 @@ const Todos = () => {
   const state = useSelector((state) => {
     return {
       signIn: state.signIn,
+      task: state.Task,
       
     };
   });
@@ -21,6 +22,12 @@ const Todos = () => {
 
   useEffect(() => {
     console.log(state.signIn);
+    getAllTasks();
+  }, []);
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    setLocal(token);
     getAllTasks();
   }, []);
 
