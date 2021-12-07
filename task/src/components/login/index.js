@@ -14,11 +14,6 @@ const Login = () => {
   });
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-    
-  }, []);
-
   // function login
   const login = async () => {
     try {

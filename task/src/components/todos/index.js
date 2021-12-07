@@ -3,7 +3,6 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../reducers/login";
 
-
 const Todos = () => {
   const [tasks, setTasks] = useState([]);
   const [task, setTask] = useState("");
@@ -13,27 +12,19 @@ const Todos = () => {
     return {
       signIn: state.signIn,
       task: state.Task,
-      
     };
   });
 
-  const dispatch = useDispatch()
-
+  const dispatch = useDispatch();
 
   useEffect(() => {
     console.log(state.signIn);
     getAllTasks();
   }, []);
 
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-    setLocal(token);
-    getAllTasks();
-  }, []);
-
   const signout = () => {
     localStorage.clear();
-    dispatch(logout({ user: null , token: "" }))
+    dispatch(logout({ user: null, token: "" }));
   };
 
   //get all tasks
@@ -107,7 +98,6 @@ const Todos = () => {
     }
   };
 
-
   return (
     <>
       <div>
@@ -129,7 +119,7 @@ const Todos = () => {
           tasks.map((item) => (
             <>
               <h2 key={item._id}>{item.name}</h2>
-              <input onChange={(val) => setUpdate(val.target.value)}/>
+              <input onChange={(val) => setUpdate(val.target.value)} />
               <button onClick={() => updateTask(item._id)}>Update</button>
               <button onClick={() => deleteTask(item._id)}>Delete</button>
             </>
